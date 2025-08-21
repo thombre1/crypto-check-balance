@@ -8,22 +8,25 @@
 </head>
 <body class="font-medium">
   
-  <div class="w-full ">
-      <h2 class="font-extrabold text-4xl">Wallet Balance Checker</h2>
+  <div class=" mt-20 min-h-screen max-w-2xl mx-auto ">
+      <h2 class="font-extrabold text-4xl hover:pointer">Wallet Balance Checker</h2>
     <label for="currency">Select Currency:</label>
       <select id="currency">
-        <option value="btc">Bitcoin (BTC)</option>
-        <option value="sol">Solana (SOL)</option>
+        <option class="text-black" value="btc">Bitcoin (BTC)</option>
+        <option class="text-black" value="sol">Solana (SOL)</option>
       </select>
     
     <br><br>
-    <label for="address">Wallet Address:</label>
-    <input type="text" id="address" size="60" placeholder="Enter wallet address">
+    <div class="grid grid-cols-5">
+      <label class="columns-1" for="address">Wallet Address:</label>
+      <input class="ml-4 col-span-2 pl-2" type="text" id="address" size="60" placeholder="Enter wallet address">
+    </div>
     
     <br><br>
-    <button class="" onclick="fetchBalance()">Check Balance</button>
-    
-    <h3 class="text-amber-300"> Balance: <span id="balance">---</span></h3>
+    <div class="grid grid-cols-4">
+      <button class="hover:border-amber-300 columns-1" onclick="fetchBalance()">Check Balance</button>
+      <h3 class="text-amber-300 mt-2 ml-10 col-span-3"> Balance: <span id="balance">---</span></h3>
+    </div>
   </div>
 
   <script src="./src/main.js"></script>
